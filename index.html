@@ -1,31 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lead Submission Form</title>
-    <script defer src="script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PCZP APIs Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    .form-container {
+      max-width: 400px;
+      margin: 50px auto;
+      padding: 20px;
+      background: #fff;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+    }
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    label {
+      font-size: 14px;
+      margin-bottom: 5px;
+      display: block;
+      color: #555;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    .response {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 14px;
+      color: #333;
+    }
+  </style>
 </head>
 <body>
-    <h1>Submit Lead</h1>
+  <div class="form-container">
+    <h2>PCZP APIs Form</h2>
     <form id="leadForm">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" placeholder="Your Name" required><br><br>
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" placeholder="Your Email" required><br><br>
-
-        <label for="phone">Phone Number:</label>
-        <input type="tel" id="phone" name="phone" minlength="10" maxlength="15" placeholder="Your Phone Number" required><br><br>
-
-        <label for="zip">ZIP Code:</label>
-        <input type="text" id="zip" name="zip" placeholder="Your ZIP Code" required><br><br>
-
-        <label for="leadId">Lead ID:</label>
-        <input type="text" id="leadId" name="leadId" placeholder="Enter Lead ID" required><br><br>
-
-        <button type="submit">Submit Lead</button>
+      <label for="name">Name</label>
+      <input type="text" id="name" placeholder="Enter your name" required>
+      
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Enter your email" required>
+      
+      <label for="phone">Phone</label>
+      <input type="tel" id="phone" placeholder="Enter your phone number" required>
+      
+      <label for="zip">Zip Code</label>
+      <input type="text" id="zip" placeholder="Enter your zip code" required>
+      
+      <label for="leadId">Lead ID</label>
+      <input type="text" id="leadId" placeholder="Enter the Lead ID" required>
+      
+      <button type="submit">Submit Lead</button>
     </form>
-    <div id="response"></div>
+    <div class="response" id="response"></div>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
